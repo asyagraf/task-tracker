@@ -22,17 +22,23 @@
                         @*<li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Projects</a>
                         </li>*@
-                        @*<li class="nav-item">
-                            <a class="nav-link text-dark" href=@swDoc>Swagger json</a>
+                        <li class="nav-item">
+                            <a id='swg' class="nav-link text-dark">Swagger UI</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" href=@swUI>Swagger UI</a>
-                        </li>*@
+                            <a id ='swg2' class="nav-link text-dark">Swagger json</a>
+                        </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
+    <script>
+		var item = document.getElementById('swg');
+        var item2 = document.getElementById('swg2');
+        item.href = 'https://' + window.location.host + '/swagger';
+        item2.href = 'https://' + window.location.host + '/swagger/v1/swagger.json';
+	</script>
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
